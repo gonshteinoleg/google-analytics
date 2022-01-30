@@ -40,7 +40,7 @@ def load_data_to_gbq(df, dataset_name, table_name):
     client.load_table_from_dataframe(df, table_ref).result()
 
 # get data
-result = get_data_from_ga_in_loop('1234567', '2021-12-15', '2022-01-15')
+result = get_data_from_ga('1234567', '2021-12-15', '2022-01-15')
 
 # load data to gbq
 load_data_to_gbq(result, 'dataset-name', 'table-name')
